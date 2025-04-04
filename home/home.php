@@ -1,5 +1,5 @@
 <?php
-include("../../db.php");
+include("../db.php");
 ?>
 
 <!DOCTYPE html>
@@ -13,10 +13,20 @@ include("../../db.php");
 </head>
 
 <body>
+
     <?php include '../navbar/navtop.php'; ?> <!--adds top menu-->
+
+
+    <div class="main_body">
     <h1>Page Content</h1>
-    <p>This is the main content of the page.</p>
-    
+        <p>This is the main content of the page.</p>
+    </div>
+
+
+
+
+    <?php include '../navbar/navbottom.php'; ?> <!--adds footer-->
+
 </body>
 
 </html>

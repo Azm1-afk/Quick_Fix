@@ -1,9 +1,9 @@
 body {
     font-family: sans-serif;
-    background-color: #b5d8f0; /* A very light pastel yellow */
+    background-color: #b5d8f0; 
     color: #333;
     margin: 0;
-    padding: 0;
+    padding-top: 60px;
 }
 
 .home-content {
