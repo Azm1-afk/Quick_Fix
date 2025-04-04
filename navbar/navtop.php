@@ -10,7 +10,6 @@
     </div>
 </div>
 
-
 <style>
 .navtop {
     background-color: #2c3e50;
