@@ -12,6 +12,11 @@
     padding: 20px;
     text-align: center;
     border-top: 1px solid #34495e;
+    /* Make it stick to the bottom */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
 }
 
 .navbottom-content {

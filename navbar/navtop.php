@@ -1,7 +1,7 @@
 <div class="navtop">
     <div class="navtop-left">
     <img src="logo.png" alt="Logo">
-        <a href="http://localhost/newproject/pages/home/home.php">QuickFix</a>
+        <a href="http://localhost/QUICKFIX/Quick_Fix/home/">QuickFix</a>
     </div>
     <div class="navtop-right">
         <a href="/products">Products</a> <!--redirections from the navtop here-->
@@ -12,40 +12,45 @@
 
 
 <style>
-/* navtop.css */
 .navtop {
-    background-color: rgb(35, 124, 136);
+    background-color: #2c3e50;
     padding: 30px;
     border-bottom: 1px solid #b2ebf2;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed; /* Make it stick to the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure it's above other elements */
 }
 
 .navtop-left {
-    display: flex; /* Use flexbox to align logo and text horizontally */
-    align-items: center; /* Vertically center logo and text */
-    gap: 10px; /* Add some space between the logo and text */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.navtop-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-right: 40px;
 }
 
 .navtop-left img {
-    height: 20px; /* Adjust the height of your logo as needed */
-    /* You can add other styles here, such as:
-       border-radius: 50%;  to make it a circle
-       margin-right: 10px;  If you don't use gap
-    */
+    height: 20px;
 }
 
-
 .navtop-left a {
-    color: #333;
+    color: #fff;
     text-decoration: none;
     font-size: 20px;
     font-weight: bold;
 }
 
 .navtop-right a {
-    color: #555;
+    color: #fff;
     text-decoration: none;
     font-size: 16px;
     margin-left: 20px;
