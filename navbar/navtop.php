@@ -1,6 +1,6 @@
 <div class="navtop">
     <div class="navtop-left">
-    <img src="logo.png" alt="Logo">
+    <img src="../navbar/mechanic_kat.png" alt="Logo">
         <a href="http://localhost/QUICKFIX/Quick_Fix/home/">QuickFix</a>
     </div>
     <div class="navtop-right">
@@ -38,7 +38,7 @@
 }
 
 .navtop-left img {
-    height: 20px;
+    height: 50px;
 }
 
 .navtop-left a {

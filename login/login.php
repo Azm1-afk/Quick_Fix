@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $error_message = "Please enter both username and password.";
     } else {
         // Prepare and execute the SQL query to fetch the user
-        $sql = "SELECT id, username, password, role FROM users WHERE username = ?";
+        $sql = "SELECT username,password FROM users WHERE username = ?";
         $stmt = $conn->prepare($sql);
 
         if ($stmt) {
@@ -45,7 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     $_SESSION['role'] = $row["role"]; // Store the user's role (customer or admin)
 
                     $success_message = "Login successful! Redirecting...";
-                    header("Location: home.php"); //  Change to your home page
+                    header("Location: http://localhost/QUICKFIX/Quick_Fix/home/home.php"); //  Change to your home page
                     exit();
                 } else {
                     $error_message = "Invalid password.";
