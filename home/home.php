@@ -14,9 +14,16 @@ include("../../db.php");
 
 <body>
     <?php include '../navbar/navtop.php'; ?> <!--adds top menu-->
+
+
+
     <h1>Page Content</h1>
     <p>This is the main content of the page.</p>
-    
+
+
+
+    <?php include '../navbar/navbottom.php'; ?> <!--adds footer-->
+
 </body>
 
 </html>
