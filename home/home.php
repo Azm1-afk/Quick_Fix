@@ -18,7 +18,7 @@ include("../db.php");
 
 
     <div class="main_body">
-    <h1>Page Content</h1>
+        <h1>Page Content</h1>
         <p>This is the main content of the page.</p>
     </div>
 
