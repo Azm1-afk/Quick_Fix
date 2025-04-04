@@ -3,7 +3,7 @@
 session_start();
 
 // Include the database connection file
-require_once '../../db.php';
+require_once '../db.php';
 
 // Initialize variables to store messages
 $error_message = "Successfully logged in!";
@@ -66,13 +66,17 @@ $conn->close();
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="login.css"> </head>
+    <link rel="stylesheet" href="login.css">
+</head>
+
 <body>
-    <?php include '../navbar/navtop.php'; ?> <div class="login-container">
+    <?php include '../navbar/navtop.php'; ?>
+    <div class="login-container">
         <h2>Login</h2>
 
         <?php if ($error_message) : ?>
@@ -93,12 +97,114 @@ $conn->close();
                 <input type="password" id="password" name="password" required>
             </div>
             <button type="submit">Login</button>
-            <p>Don't have an account? <a href="register.php">Register</a></p> </form>
+            <p>Don't have an account? <a href="register.php">Register</a></p>
+        </form>
     </div>
 
-    <?php include 'footer.php'; ?> </body>
+    <?php include '../navbar/navbottom.php'; ?> <!--adds footer-->
+
 </html>
 
 <style>
-    
+    body {
+        font-family: sans-serif;
+        background-color: #f8f8f8;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    .login-container {
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        width: 350px;
+        text-align: center;
+    }
+
+    .login-container h2 {
+        margin-bottom: 25px;
+        color: #333;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+        text-align: left;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 8px;
+        color: #555;
+        font-weight: bold;
+    }
+
+    .form-group input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        outline: none;
+        transition: border-color 0.3s ease;
+    }
+
+    .form-group input:focus {
+        border-color: #007bff;
+    }
+
+    .error-message {
+        color: #dc3545;
+        margin-bottom: 15px;
+        padding: 10px;
+        background-color: #f8d7da;
+        border: 1px solid #f5c6cb;
+        border-radius: 5px;
+        text-align: center;
+    }
+
+    .success-message {
+        color: #155724;
+        margin-bottom: 15px;
+        padding: 10px;
+        background-color: #d4edda;
+        border: 1px solid #c3e6cb;
+        border-radius: 5px;
+        text-align: center;
+    }
+
+
+    button[type="submit"] {
+        width: 100%;
+        padding: 12px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 1em;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    button[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+
+    p {
+        margin-top: 15px;
+        font-size: 0.9em;
+        color: #666;
+    }
+
+    p a {
+        color: #007bff;
+        text-decoration: none;
+    }
+
+    p a:hover {
+        text-decoration: underline;
+    }
 </style>
