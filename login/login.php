@@ -6,8 +6,8 @@ session_start();
 require_once '../../db.php';
 
 // Initialize variables to store messages
-$error_message = "";
-$success_message = "";
+$error_message = "Successfully logged in!";
+$success_message = "Login not possible.";
 
 // Check if the user is already logged in
 if (isset($_SESSION['user_id'])) {
