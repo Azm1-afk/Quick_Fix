@@ -26,38 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($username) || empty($password)) {
         $error_message = "Please enter both username and password.";
     } else {
-        // Prepare and execute the SQL query to fetch the user
-        $sql = "SELECT username,password FROM users WHERE username = ?";
-        $stmt = $conn->prepare($sql);
-
-        if ($stmt) {
-            $stmt->bind_param("s", $username);
-            $stmt->execute();
-            $result = $stmt->get_result();
-
-            if ($result->num_rows == 1) {
-                $row = $result->fetch_assoc();
-                // Verify the password
-                if (password_verify($password, $row["password"])) {
-                    // Password is correct, so set session variables and redirect
-                    $_SESSION['user_id'] = $row["id"];
-                    $_SESSION['username'] = $row["username"];
-                    $_SESSION['role'] = $row["role"]; // Store the user's role (customer or admin)
-
-                    $success_message = "Login successful! Redirecting...";
-                    header("Location: http://localhost/QUICKFIX/Quick_Fix/home/home.php"); //  Change to your home page
-                    exit();
-                } else {
-                    $error_message = "Invalid password.";
-                }
-            } else {
-                $error_message = "Invalid username.";
-            }
-
-            $stmt->close();
-        } else {
-            $error_message = "Error preparing statement: " . $conn->error;
-        }
+        
     }
 }
 
